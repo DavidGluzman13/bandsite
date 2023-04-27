@@ -9,9 +9,15 @@
   </head>
   <body>
     <header class="navbar">
-      <h1 class="navbar__header">BANDSITE</h1>
+      <img
+        class="navbar__header"
+        src="./assets/logos/Logo-bandsite.svg"
+        alt="BANDSITE logo"
+      />
       <article class="navbar__buttons">
-        <button class="navbar__button">Biography</button>
+        <button class="navbar__button navbar__button--special">
+          Biography
+        </button>
         <button class="navbar__button">Shows</button>
       </article>
     </header>
@@ -19,16 +25,18 @@
       <h1 class="heroSection__header">The Bees Knees</h1>
     </div>
 
-    <div class="contentSection">
-      <h2>About the Musicians</h2>
-      <img />
-      <p>
+    <div class="bioSection">
+      <h2 class="bioSection__header">About the Musicians</h2>
+      <img class="bioSection__img" />
+      <p class="bioSection__Quote">
         “We push each other to be the best. It’s not uncommon for one of us to
         say ‘this needs to be better, back to the drawing board’”
       </p>
-      <p>- Bryan Teddy, lead vocalist of The Bees Knees</p>
-      <h3>The Bees Knees</h3>
-      <p>
+      <p class="bioSection__ref">
+        - Bryan Teddy, lead vocalist of The Bees Knees
+      </p>
+      <h3 class="bioSection__miniHeader">The Bees Knees</h3>
+      <p class="bioSection__content">
         The Bees Knees is a pop rock band originating from San Francisco,
         California. The band consists of lead vocalist Bryan Teddy, guitarist
         Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer
@@ -48,18 +56,86 @@
       </p>
     </div>
 
-    <div class="photoGallerySection">
-      <h2>Photo Gallery</h2>
-      <img />
-      <img />
-      <img />
-      <img />
-      <img />
-      <img />
+    <div class="gallerySection">
+      <h2 class="gallerySection__header">Photo Gallery</h2>
+      <div class="gallerySection__images">
+        <img src="./assets/images/Photo-gallery-1.jpg" alt="Photo-gallery-1" />
+        <img src="./assets/images/Photo-gallery-2.jpg" alt="Photo-gallery-2" />
+        <img src="./assets/images/Photo-gallery-3.jpg" alt="Photo-gallery-3" />
+        <img src="./assets/images/Photo-gallery-4.jpg" alt="Photo-gallery-4" />
+        <img src="./assets/images/Photo-gallery-5.jpg" alt="Photo-gallery-5" />
+        <img src="./assets/images/Photo-gallery-6.jpg" alt="Photo-gallery-6" />
+        <img src="./assets/images/Photo-gallery-7.jpg" alt="Photo-gallery-7" />
+        <img src="./assets/images/Photo-gallery-8.jpg" alt="Photo-gallery-8" />
+        <img src="./assets/images/Photo-gallery-9.jpg" alt="Photo-gallery-9" />
+      </div>
     </div>
-
     <footer>
-      <h1 class="footer__header">Get in Touch</h1>
+      <div class="footer__navbar">
+        <h1 class="footer__header">Get in Touch</h1>
+        <div class="footer__icons">
+          <button>
+            <img
+              class="footer__icon--modifier"
+              src="./assets/icons/SVG/Icon-instagram.svg"
+              alt="instegram"
+            />
+          </button>
+          <button>
+            <img
+              class="footer__icon--modifier"
+              src="./assets/icons/SVG/Icon-facebook.svg"
+              alt="facebook"
+            />
+          </button>
+          <button>
+            <img
+              class="footer__icon--modifier"
+              src="./assets/icons/SVG/Icon-twitter.svg"
+              alt="twitter"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="footer__infoContent">
+        <!-- separate between the three "booking agents" as divs -->
+        <article class="footer__infoContent--agent">
+          <h2 class="footer__infoContent--agent--Name">
+            Cam Adams <span>The Bees Knees Management</span>
+          </h2>
+          <p class="footer__infoContent--agent--location">
+            503 Broadway Penthouse, New York, NY 10012, USA
+          </p>
+          <p class="footer__infoContent--agent--email">info@thebeesknees.com</p>
+        </article>
+        <article class="footer__infoContent--agent">
+          <h2 class="footer__infoContent--agent--Name">
+            Pearl Gregg <span>Limitless Artist Group</span>
+          </h2>
+          <p class="footer__infoContent--agent--location">
+            Booking Agent for <span>US / South America / Japan</span>
+          </p>
+          <p class="footer__infoContent--agent--email">
+            pearl.gregg@limitlessag.com
+          </p>
+        </article>
+        <article class="footer__infoContent--agent">
+          <h2 class="footer__infoContent--agent--Name">
+            Carson Whyte <span>ARCH Entertainment</span>
+          </h2>
+          <p class="footer__infoContent--agent--location">
+            Booking Agent for <span>UK / EU / AU</span>
+          </p>
+          <p class="footer__infoContent--agent--email">
+            cwhyte@archentertainment.com
+          </p>
+        </article>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__bottomText">
+          Copyright The Bees Knees © 2021 All Rights Reserved
+        </p>
+      </div>
     </footer>
   </body>
 </html>

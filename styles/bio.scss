@@ -32,10 +32,13 @@ body {
   align-items: center;
 
   &__header {
-    font-family: AvenirNextLTPro-regular;
-    font-size: 4rem;
-    margin-bottom: 0;
-    font-weight: 300;
+    // margin-bottom: 0;
+    width: 15rem;
+    padding: 2rem 0 0 0;
+  }
+
+  &__buttons {
+    margin: 0;
   }
 
   &__button {
@@ -43,6 +46,11 @@ body {
     color: #ffffff;
     border: none;
     font-size: 1.5rem;
+    padding: 2rem 9rem;
+
+    &--special {
+      border-bottom: 5px solid #ffffff;
+    }
   }
 
   @include tablet {
@@ -63,7 +71,6 @@ body {
   flex-direction: row;
   justify-content: space-around;
   width: 100vw;
-  padding: 2rem;
 }
 
 .heroSection {
@@ -89,3 +96,5 @@ body {
     height: 100vh;
   }
 }
+
+
