@@ -20,6 +20,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: AvenirNextLTPro-Regular;
+  width: 100vw;
 }
 
 .navbar {
@@ -39,6 +40,10 @@ body {
 
   &__buttons {
     margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
   }
 
   &__button {
@@ -46,38 +51,33 @@ body {
     color: #ffffff;
     border: none;
     font-size: 1.5rem;
-    padding: 2rem 9rem;
+    width: 50%;
+    padding: 1.5rem 0;
 
     &--special {
-      border-bottom: 5px solid #ffffff;
+      border-bottom: 7px solid #ffffff;
     }
   }
 
-  @include tablet {
-    flex-direction: row;
-    align-items: center;
-    height: 15vh;
-  }
+  // @include tablet {
+  //   flex-direction: row;
+  //   align-items: center;
+  //   height: 15vh;
+  // }
 
-  @include desktop {
-    flex-direction: row;
-    align-items: center;
-    height: 15vh;
-  }
+  // @include desktop {
+  //   flex-direction: row;
+  //   align-items: center;
+  //   height: 15vh;
+  // }
 }
 
-.navbar__buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100vw;
-}
-
-.heroSection {
-  background-image: url(../assets/images/hero-bio.jpg);
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../assets/images/hero-bio.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  height: 45vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -85,6 +85,7 @@ body {
   &__header {
     color: #ffffff;
     font-size: 4rem;
+    margin: 1rem;
     text-align: center;
   }
 
@@ -97,4 +98,168 @@ body {
   }
 }
 
+.bio {
+  margin: 1rem;
 
+  &__header {
+    font-size: 3.5rem;
+    font-family: AvenirNextLTPro-Demi;
+    color: #323232;
+    font-weight: 100;
+    margin: 1rem;
+    margin-bottom: 0;
+    padding-top: 2rem;
+  }
+
+  &__img {
+    width: 90vw;
+    height: 38vh;
+    margin: 1rem;
+    margin-bottom: 0;
+  }
+
+  &__quote {
+    font-size: 2rem;
+    font-family: AvenirNextLTPro-Demi;
+    font-weight: 600;
+    margin: 1rem;
+    margin-bottom: 0;
+    padding-top: 2rem;
+    line-height: 3.5rem;
+    color: #323232;
+  }
+
+  &__ref {
+    @extend .bio__quote;
+    padding-top: 0;
+  }
+
+  &__miniHeader {
+    @extend .bio__quote;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  &__content--modifier {
+    font-size: 2rem;
+    margin: 1rem 3.5rem 2rem 1rem;
+    line-height: 2.4rem;
+  }
+}
+
+.gallery {
+  background-color: #fafafa;
+
+  &__header {
+    font-size: 3rem;
+    margin: 2rem;
+    margin-bottom: 0;
+    padding-top: 2rem;
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    &--img {
+      // width: 90vw;
+      background-size: cover;
+      background-position: center;
+      margin: 2rem;
+      margin-bottom: 0;
+      width: 90vw;
+    }
+  }
+}
+
+footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.footer-navbar {
+  width: 22rem;
+
+  &__header {
+    font-size: 3.5rem;
+    margin-left: 1rem;
+  }
+
+  &__icons {
+    width: 18rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 2em;
+    margin-bottom: 5rem;
+
+    &--modifier {
+      width: 3.5rem;
+      height: 3.5em;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.footer__infoContent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+
+  &--agent--Name h2 {
+    font-size: 2rem;
+    font-family: AvenirNextLTPro-regular;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    line-height: 2.4rem;
+  }
+
+  &--agent--location p,
+  &--agent--email {
+    font-size: 2rem;
+    font-family: AvenirNextLTPro-regular;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+  }
+
+  &--agent--Name,
+  &--agent--location,
+  &--agent--email {
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+  }
+}
+
+.footerlogo {
+  &__img {
+    width: 18rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+  }
+}
+
+.footer__bottom {
+  &--text {
+    font-size: 1.5rem;
+    font-family: AvenirNextLTPro-regular;
+    font-weight: 200;
+    padding: 0;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+  }
+}
