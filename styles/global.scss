@@ -9,6 +9,7 @@ body {
   width: 100%;
 }
 
+//Navigation bar which includes the logo and buttons, all vary in size depending on the screen size.
 .navbar {
   background-color: #323232;
   color: #ffffff;
@@ -92,6 +93,7 @@ body {
   }
 }
 
+//Hero image which includes a header.
 .hero {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
     url(../assets/images/hero-bio.jpg) no-repeat;
@@ -128,6 +130,7 @@ body {
   }
 }
 
+//Footer-info section which includes a slogen, info, social media buttons and logo.
 footer {
   background-color: #323232;
   color: #ffffff;
