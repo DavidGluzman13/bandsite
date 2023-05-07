@@ -103,18 +103,20 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .navbar__button--special {
-    padding: 2.5rem 0;
+    padding: 2.8rem 0;
+    width: 3rem;
   }
 }
 
 .hero {
-  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-bio.jpg) no-repeat;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-shows.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 45vh;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  padding: 2rem;
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -126,25 +128,64 @@ body {
     height: 75vh;
   }
 }
-.hero__header {
+.hero__small-header {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+.hero__big-header {
   color: #ffffff;
   font-size: 3rem;
-  margin: 1rem 2rem;
-  text-align: center;
 }
+
 @media screen and (min-width: 768px) {
-  .hero__header {
-    font-size: 3.5rem;
+  .shows-list {
     margin: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .hero__header {
-    font-size: 4rem;
-    margin: 10rem;
+  .shows-list {
+    margin: 2rem 10rem;
   }
 }
-
+.shows-list__header {
+  font-size: 3rem;
+  font-family: AvenirNextLTPro-Demi;
+  color: #323232;
+  font-weight: 100;
+  margin: 1rem;
+  margin-bottom: 0;
+  padding-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .shows-list__header {
+    font-size: 2.2rem;
+    padding: 1rem 0;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-list__header {
+    font-size: 3rem;
+  }
+}
+.shows-list__container {
+  border-bottom: 1px solid #323232;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .shows-list__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+}
+.shows-list__container-div {
+  display: flex;
+  flex-direction: column;
+}
 footer {
   background-color: #323232;
   color: #ffffff;
@@ -317,4 +358,4 @@ footer {
     font-size: 0.9rem;
     line-height: 1.5rem;
   }
-}/*# sourceMappingURL=global.css.map */
+}/*# sourceMappingURL=shows.css.map */

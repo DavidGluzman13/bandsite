@@ -91,22 +91,24 @@ body {
       }
 
       @include desktop {
-        padding: 2.5rem 0;
+        padding: 2.8rem 0;
+        width: 3rem;
       }
     }
   }
 }
 
-//Hero image which includes a header.
+//Hero image which includes two small headers and a song link.
 .hero {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
-    url(../assets/images/hero-bio.jpg) no-repeat;
+    url(../assets/images/hero-shows.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 45vh;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  padding: 2rem;
 
   @include tablet {
     height: 55vh;
@@ -116,20 +118,72 @@ body {
     height: 75vh;
   }
 
-  &__header {
+  &__small-header {
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+
+  &__big-header {
     color: #ffffff;
     font-size: 3rem;
-    margin: 1rem 2rem;
-    text-align: center;
+  }
+}
+
+//shows section
+.shows-list {
+  // margin: 1rem;
+
+  @include tablet {
+    margin: 2rem;
+  }
+
+  @include desktop {
+    margin: 2rem 10rem;
+  }
+
+  &__header {
+    font-size: 3rem;
+    font-family: AvenirNextLTPro-Demi;
+    color: #323232;
+    font-weight: 100;
+    margin: 1rem;
+    margin-bottom: 0;
+    padding-top: 2rem;
 
     @include tablet {
-      font-size: 3.5rem;
-      margin: 2rem;
+      font-size: 2.2rem;
+      padding: 1rem 0;
+      margin: 0;
     }
 
     @include desktop {
-      font-size: 4rem;
-      margin: 10rem;
+      font-size: 3rem;
+    }
+  }
+
+  &__container {
+    border-bottom: 1px solid #323232;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    @include desktop {
+      // include desktop container parameters
+    }
+
+    &-div {
+      display: flex;
+      flex-direction: column;
+
+      @include tablet {
+      }
     }
   }
 }

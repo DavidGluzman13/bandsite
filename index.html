@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="./scripts/index-page.js" defer></script> -->
     <link rel="stylesheet" href="./styles/bio.css" />
-    <link rel="stylesheet" href="./styles/global.css" />
     <title>BandSite</title>
   </head>
   <body>
+    <!-- -------------------------------- NAVIGATION BAR ----------------------------------- -->
     <header class="navbar">
       <a href="./index.html"
         ><img
@@ -17,16 +18,18 @@
           alt="BANDSITE logo"
       /></a>
       <article class="navbar__buttons">
-        <button class="navbar__button navbar__button--special">
-          Biography
-        </button>
-        <button class="navbar__button">Shows</button>
+        <a href="./index.html" class="navbar__button navbar__button--special"
+          >Biography</a
+        >
+        <a href="./pages/shows.html" class="navbar__button">Shows</a>
       </article>
     </header>
+
+    <!-- -------------------------------- HERO SECTION ----------------------------------- -->
     <div class="hero">
       <h1 class="hero__header">The Bees Knees</h1>
     </div>
-
+    <!-- -------------------------------- BIO SECTION ----------------------------------- -->
     <div class="bio">
       <h2 class="bio__header">About the Musicians</h2>
       <img class="bio__img" src="./assets/images/band.jpg" />
@@ -60,7 +63,7 @@
         </p>
       </div>
     </div>
-
+    <!-- -------------------------------- GALLERY ----------------------------------- -->
     <div class="gallery">
       <h2 class="gallery__header">Photo Gallery</h2>
       <div class="gallery__images">
@@ -111,6 +114,50 @@
         />
       </div>
     </div>
+
+    <!-- -------------------------------- COMMENT SECTION ----------------------------------- -->
+    <div class="comment">
+      <h2 class="comment-header">Joing The Conversation</h2>
+      <form class="comment-div">
+        <div class="comment-div__img">
+          <img
+            class="comment-div__img--modifier"
+            src="./assets/images/Mohan-muruge.jpg"
+            alt="user"
+          />
+        </div>
+        <div class="comment-div__container">
+          <label class="comment-div__container--label" for="username"
+            >NAME </label
+          ><input
+            class="comment-div__container--input"
+            id="userName"
+            type="text"
+            placeholder="Enter your name"
+          />
+          <label class="comment-div__container--label" for="comment"
+            >COMMENT</label
+          ><input
+            class="comment-div__container--input comment-div__container--input--comment"
+            id="userComment"
+            type="text"
+            placeholder="Add a new comment"
+          />
+          <button class="comment-div__container--button">COMMENT</button>
+        </div>
+      </form>
+      <hr class="comment__hr" />
+
+      <script src="./scripts/index-page.js" defer></script>
+      <!-- -------------------------------- USER COMMENTS ----------------------------------- -->
+      <div class="reviews">
+        <ul class="review">
+          <li class="review__card"></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- -------------------------------- FOOTER ----------------------------------- -->
     <footer>
       <div class="footer-navbar">
         <h1 class="footer-navbar__header">Get in Touch</h1>
