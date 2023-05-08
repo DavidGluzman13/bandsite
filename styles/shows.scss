@@ -175,6 +175,15 @@ body {
       border-bottom: 3px solid #e1e1e1;
       padding-bottom: 2rem;
 
+      &:hover {
+        background-color: #fafafa;
+        cursor: pointer;
+      }
+
+      &.selected {
+        background-color: #e1e1e1;
+      }
+
       @include tablet {
         padding: 1rem 0;
       }

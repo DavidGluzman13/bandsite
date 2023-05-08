@@ -109,3 +109,8 @@ const addLabelClass = () => {
 };
 
 addLabelClass();
+
+$(".shows-list__container-li").on("click", function () {
+  $(".shows-list__container-li").removeClass("selected");
+  $(this).addClass("selected");
+});
