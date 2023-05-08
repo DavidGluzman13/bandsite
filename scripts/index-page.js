@@ -23,7 +23,7 @@ const comments = [
   },
 ];
 
-const commentContainer = document.querySelector(".review__card");
+const commentContainer = document.querySelector(".review");
 const displayComment = (name, date, reviews) => {
   const listItem = document.createElement("li");
   const userImage = document.createElement("div");
@@ -35,10 +35,10 @@ const displayComment = (name, date, reviews) => {
 
   listItem.classList.add("review__card");
   userImage.classList.add("review__card--user--img");
-  userName.classList.add("review__card--name");
+  userName.classList.add("review__card--container--name");
   reviewContainer.classList.add("review__card--container");
-  dateSpan.classList.add("review__card--date");
-  comment.classList.add("review__card--comment");
+  dateSpan.classList.add("review__card--container--date");
+  comment.classList.add("review__card--container--comment");
 
   userName.innerText = name;
   dateSpan.innerText = date;
@@ -74,3 +74,4 @@ FormElement.addEventListener("submit", (event) => {
 
   console.log(name, comment);
 });
+

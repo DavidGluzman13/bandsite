@@ -21,7 +21,7 @@ body {
 
   @include tablet {
     flex-direction: row;
-    height: 4rem;
+    height: 5rem;
   }
 
   @include desktop {
@@ -34,7 +34,7 @@ body {
     padding: 2rem 0 0 0;
 
     @include tablet {
-      width: 7rem;
+      width: 8rem;
       padding: 0 2rem;
     }
 
@@ -85,9 +85,9 @@ body {
       text-align: center;
 
       @include tablet {
-        border-bottom: 2px solid #ffffff;
+        border-bottom: 3px solid #ffffff;
         // width: 5rem;
-        padding: 1.4rem 0;
+        padding: 1.9rem 0;
       }
 
       @include desktop {
@@ -104,7 +104,7 @@ body {
     url(../assets/images/hero-bio.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 45vh;
+  height: 35vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -119,7 +119,7 @@ body {
 
   &__header {
     color: #ffffff;
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin: 1rem 2rem;
     text-align: center;
 
@@ -171,6 +171,8 @@ body {
 
   &__img {
     width: 90vw;
+    height: 30vh;
+    object-fit: cover;
     margin: 1rem;
     margin-bottom: 0;
 
@@ -291,10 +293,16 @@ body {
 
 .gallery {
   background-color: #fafafa;
+  padding: 0 0 2rem;
+
+  @include tablet {
+    margin: 0;
+    padding: 3rem 0 1rem;
+  }
 
   @include desktop {
-    margin: 5rem 10rem;
-    margin-bottom: 2rem;
+    margin: 0;
+    padding: 1rem 0;
   }
 
   &__header {
@@ -307,11 +315,12 @@ body {
     @include tablet {
       font-size: 2.2rem;
       padding: 0;
-      margin: 4rem 2.4rem 0;
+      margin: 0 2rem 0;
     }
 
     @include desktop {
-      font-size: 3rem;
+      font-size: 2.2rem;
+      padding-bottom: 1rem;
     }
   }
 
@@ -337,14 +346,14 @@ body {
       width: 90vw;
 
       @include tablet {
-        width: 29vw;
+        width: 31%;
         // height: 15vh;
         margin: 0;
         margin-bottom: 1rem;
       }
 
       @include desktop {
-        width: 22vw;
+        width: 32%;
       }
     }
   }
@@ -359,32 +368,39 @@ body {
     width: 95%;
     margin-top: 3%;
     margin-bottom: 2%;
+    background-color: #afafaf;
   }
 
   &-header {
-    font-size: 3rem;
+    font-size: 3.7rem;
     margin: 2rem;
     margin-bottom: 0;
     padding-top: 2rem;
     color: #323232;
 
     @include tablet {
-      font-size: 2.2rem;
+      font-size: 2rem;
       padding: 0;
       margin: 4rem 2.4rem 0;
     }
 
     @include desktop {
-      font-size: 3rem;
+      font-size: 2.2rem;
     }
   }
 
   &-div {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     box-sizing: border-box;
+    margin: 0 2rem;
+
+    @include tablet {
+      justify-content: center;
+      margin: 1rem 2rem 0;
+    }
 
     &-div__img {
       margin: 0;
@@ -408,26 +424,56 @@ body {
       flex-direction: column;
       align-items: flex-start;
       flex-wrap: wrap;
-      width: 70%;
+      box-sizing: border-box;
+      width: 85%;
       font-weight: 700;
       color: #afafaf;
 
+      @include tablet {
+        width: 75%;
+        margin: 0 1rem;
+        margin-bottom: 1rem;
+      }
+
+      @include desktop {
+        width: 40%;
+      }
+
       &--label {
-        padding: 2rem 0 0.2rem 0;
+        font-size: 1.5rem;
+        padding: 2rem 0 0.5rem 0;
+
+        @include tablet {
+          font-size: 0.9rem;
+        }
       }
 
       &--input {
         width: 100%;
-        padding: 1rem 0;
-        margin: 0.5rem 0;
-        border: 1px solid #e1e1e1;
-        border-radius: 4px;
-        background-color: #e1e1e1;
+        box-sizing: border-box;
+        padding: 2rem 1rem;
+        // margin: 0.5rem 0;
+        border-radius: 0.5rem;
+        background-color: #fafafa;
         color: #323232;
-        border: 1px solid #e1e1e1;
+        border: 3px solid #e1e1e1;
+        font-size: 2rem;
+
+        @include tablet {
+          font-size: 0.9rem;
+          padding: 1rem 1rem;
+          border: 2px solid #e1e1e1;
+          border-radius: 0.3rem;
+        }
 
         &::placeholder {
-          padding: 1rem 0 0 1rem;
+          padding: 1rem 0;
+          font-size: 2rem;
+          color: black;
+
+          @include tablet {
+            font-size: 0.9rem;
+          }
         }
 
         &:focus {
@@ -435,15 +481,15 @@ body {
           border: 1px solid #323232;
         }
       }
-      
+
       &--input--comment {
         @extend .comment-div__container--input;
-        padding-top: 0;
-        padding-left: 1rem;
-        padding-bottom: 5rem;
-        line-height: 1rem;
+        padding-bottom: 10rem;
         position: relative;
-        text-align: start;
+
+        @include tablet {
+          padding-bottom: 5rem;
+        }
 
         &::placeholder {
           position: absolute;
@@ -451,53 +497,146 @@ body {
         }
       }
 
-      @include desktop {
-        width: 40%;
-      }
-
       //The CTA button height will remain 40px throughout all screen sizes. The CTA button width for desktop and tablet will be no less than 150px, and have no less than 32px of padding left & right. The CTA button for mobile should span the entire width of its container. For radius treatment, default to 4px on all corners
       &--button {
         width: 100%;
-        height: 40px;
-        margin: 0.5rem 0;
-        border-radius: 4px;
+        height: 6.5rem;
+        margin: 2rem 0.1rem;
+        border-radius: 0.5rem;
         background-color: #323232;
         color: #ffffff;
-        font-size: 1rem;
-        font-weight: 700;
+        font-size: 2.5rem;
+        font-weight: 400;
         border: none;
         cursor: pointer;
         align-self: flex-end;
 
         @include tablet {
-          width: 150px;
+          width: 35%;
           padding: 0 1rem;
-        }
-
-        @include desktop {
-          width: 150px;
-          padding: 0 1rem;
+          font-size: 1rem;
+          height: 3rem;
+          border-radius: 0.3rem;
+          font-weight: 500;
         }
       }
     }
   }
 
   &-div__img--modifier {
-    width: 12vw;
-    height: 10vh;
+    width: 10.5vw;
+    height: 7vh;
     border-radius: 50%;
-    margin: 2rem;
+    margin: 2rem 0;
     margin-bottom: 0;
     object-fit: cover;
 
     @include tablet {
-      width: 7vw;
-      height: 7vh;
+      width: 6vw;
+      height: 4vh;
     }
 
     @include desktop {
       width: 4vw;
-      height: 5vh;
+      height: 4vh;
+    }
+  }
+}
+
+.review {
+  list-style: none;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid #e1e1e1;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    @include tablet {
+      width: 75%;
+    }
+
+    @include desktop {
+      width: 44%;
+    }
+
+    &--user--img {
+      background-color: #e1e1e1;
+      width: 10.5vw;
+      height: 7vh;
+      border-radius: 50%;
+      // margin: 2rem;
+      // margin-bottom: 0;
+      object-fit: cover;
+
+      @include tablet {
+        width: 6vw;
+        height: 4vh;
+      }
+
+      @include desktop {
+        width: 5vw;
+        height: 4vh;
+      }
+    }
+
+    &--container {
+      width: 80%;
+      margin: 0 2rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @include tablet {
+        width: 100%;
+        margin: 0;
+        margin-left: 1rem;
+      }
+
+      &--name {
+        font-size: 1.8rem;
+        font-weight: 700;
+        width: 40%;
+        margin: 0;
+        padding-bottom: 1rem;
+
+        @include tablet {
+          font-size: 1rem;
+        }
+      }
+      &--date {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #afafaf;
+        margin: 0;
+        padding-bottom: 1rem;
+
+        @include tablet {
+          font-size: 1rem;
+        }
+      }
+      &--comment {
+        font-size: 1.8rem;
+        width: 100%;
+        font-weight: 400;
+        color: #323232;
+        margin: 0;
+        padding-bottom: 2rem;
+
+        @include tablet {
+          font-size: 1rem;
+        }
+      }
     }
   }
 }
