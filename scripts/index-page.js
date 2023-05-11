@@ -110,3 +110,16 @@ FormElement.addEventListener("submit", (event) => {
 // // convert date to human readable format
 // const date = new Date(timestamp);
 // return date.toLocaleDateString();
+
+
+//For this sprint, the navigation links were supposed to go back to the Biography page. Consider if <a> would be more appropriate here.
+// - Ensure that .css.map files aren't included in the submission.
+// - When writing your @font-face rules, ensure that you keep the font-family name the same across all fonts within the same typeface. The difference between the fonts will be the
+// font-weight & font-style rules. This is important because the font-family property is inherited, so it shouldn't need to be set again on different elements.
+// - Ensure to nest styles using BEM in your SCSS structure ( ie. &__content and &__content--modifier).
+// - When using image tags, ensure that the alt text attribute is descriptive of the content to accommodate accessibility considerations.
+// - Be aware that BEM uses kebab-case and not camelCase or PascalCase. Be sure to not chain together modifiers when using the BEM convention (B__E1--M1--M2, etc). For example,
+// review class="footer__infoContent--agent--Name" and class="bio__miniHeader".
+// - You’re off to a good start using Sass nesting and BEM classes together! Ensure that you’re consistent in your application of this and don’t deviate to use an element selector from within a
+// nested class.
+// - Remember to add an underscore "_" to the name of Sass partials.
