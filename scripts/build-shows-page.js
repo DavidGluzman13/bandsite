@@ -94,6 +94,17 @@ const displayShows = (date, venue, location) => {
 
   list.appendChild(listItem);
 
+  // remove selection off of the previously selected item
+
+  listItem.addEventListener("click", function (event) {
+    const selected = document.querySelector("selected");
+    if (!selected) {
+      listItem.classList.add("selected");
+    } else {
+      selected.classList.remove("selected");
+      listItem.classList.add("selected");
+    }
+  });
   return list;
 };
 
@@ -109,8 +120,3 @@ const addLabelClass = () => {
 };
 
 addLabelClass();
-
-$(".shows-list__container-li").on("click", function () {
-  $(".shows-list__container-li").removeClass("selected");
-  $(this).addClass("selected");
-});
