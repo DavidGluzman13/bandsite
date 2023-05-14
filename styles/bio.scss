@@ -226,7 +226,7 @@ body {
     }
   }
 
-  &__miniHeader {
+  &__mini-header {
     @extend .bio__quote;
     font-size: 1.8rem;
     margin-bottom: 1rem;
@@ -714,7 +714,7 @@ footer {
   }
 }
 
-.footer__infoContent {
+.footer__info-content {
   display: flex;
   flex-direction: column;
   margin-bottom: 5rem;

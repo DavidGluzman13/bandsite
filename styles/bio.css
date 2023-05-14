@@ -208,7 +208,7 @@ body {
        object-fit: cover;
   }
 }
-.bio__quote, .bio__miniHeader, .bio__ref {
+.bio__quote, .bio__mini-header, .bio__ref {
   font-size: 1.7rem;
   font-weight: 600;
   margin: 1rem;
@@ -218,7 +218,7 @@ body {
   color: #323232;
 }
 @media screen and (min-width: 768px) {
-  .bio__quote, .bio__miniHeader, .bio__ref {
+  .bio__quote, .bio__mini-header, .bio__ref {
     font-size: 1.3rem;
     line-height: 2rem;
     margin: 1rem 3rem;
@@ -227,7 +227,7 @@ body {
   }
 }
 @media screen and (min-width: 1280px) {
-  .bio__quote, .bio__miniHeader, .bio__ref {
+  .bio__quote, .bio__mini-header, .bio__ref {
     font-size: 1.7rem;
     line-height: 3rem;
     margin: 1rem 4rem;
@@ -245,19 +245,19 @@ body {
     margin-top: 0;
   }
 }
-.bio__miniHeader {
+.bio__mini-header {
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .bio__miniHeader {
+  .bio__mini-header {
     font-size: 1.5rem;
     margin: 1rem 3rem;
     margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1280px) {
-  .bio__miniHeader {
+  .bio__mini-header {
     font-size: 1.8rem;
     margin: 1rem 4rem;
     margin-bottom: 0;
@@ -756,14 +756,14 @@ footer {
   }
 }
 
-.footer__infoContent {
+.footer__info-content {
   display: flex;
   flex-direction: column;
   margin-bottom: 5rem;
   order: 1;
 }
 @media screen and (min-width: 768px) {
-  .footer__infoContent {
+  .footer__info-content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -772,7 +772,7 @@ footer {
     margin-bottom: 0;
   }
 }
-.footer__infoContent--agent--Name h2 {
+.footer__info-content--agent--Name h2 {
   font-size: 1.5rem;
   font-weight: 600;
   color: #e1e1e1;
@@ -781,12 +781,12 @@ footer {
   line-height: 2.4rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__infoContent--agent--Name h2 {
+  .footer__info-content--agent--Name h2 {
     font-size: 0.9rem;
     line-height: 1.5rem;
   }
 }
-.footer__infoContent--agent--location p, .footer__infoContent--agent--email {
+.footer__info-content--agent--location p, .footer__info-content--agent--email {
   font-size: 1.5rem;
   color: #e1e1e1;
   font-weight: 200;
@@ -794,17 +794,17 @@ footer {
   margin: 0;
 }
 @media screen and (min-width: 768px) {
-  .footer__infoContent--agent--location p, .footer__infoContent--agent--email {
+  .footer__info-content--agent--location p, .footer__info-content--agent--email {
     font-size: 0.9rem;
     line-height: 1.5rem;
   }
 }
-.footer__infoContent--agent--Name, .footer__infoContent--agent--location, .footer__infoContent--agent--email {
+.footer__info-content--agent--Name, .footer__info-content--agent--location, .footer__info-content--agent--email {
   margin-bottom: 3rem;
   margin-left: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__infoContent--agent--Name, .footer__infoContent--agent--location, .footer__infoContent--agent--email {
+  .footer__info-content--agent--Name, .footer__info-content--agent--location, .footer__info-content--agent--email {
     margin-bottom: 1rem;
     margin-left: 1rem;
     margin-right: 1.7rem;

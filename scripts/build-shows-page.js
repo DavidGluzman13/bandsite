@@ -1,35 +1,18 @@
-shows = [
-  {
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 15 2021",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
+let showsURL =
+  "https://project-1-api.herokuapp.com/showdates?api_key=3a907c48-ff85-47ed-a9c3-0e5400730f51";
+
+axios
+  .get(showsURL)
+  .then((response) => {
+    const shows = response.data;
+    shows.forEach((show) => {
+      displayShows(show.date, show.place, show.location);
+    });
+    // changeDate(); //calling the change Date function here so that the dates are displayed in the correct format
+  })
+  .catch((error) => {
+    console.log("It didn't work.");
+  });
 
 const showsContainer = document.querySelector(".shows-list");
 const displayShows = (date, venue, location) => {
@@ -94,6 +77,9 @@ const displayShows = (date, venue, location) => {
 
   list.appendChild(listItem);
 
+  const formattedDate = formatDate(date); // Convert the date to a human-readable format
+  showDate.innerText = formattedDate; // Display the converted date
+
   // remove selection off of the previously selected item
 
   listItem.addEventListener("click", function (event) {
@@ -107,6 +93,20 @@ const displayShows = (date, venue, location) => {
   });
   return list;
 };
+
+// Make a function that takes the date as a paremeter and returns a human-readable format
+const formatDate = (date) => {
+  const format = {
+    weekday: "short",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  };
+  const formattedDate = new Date(date).toLocaleDateString(undefined, format);
+  return formattedDate.replace(",", ""); // I tried to get rid of the comma in the date but it didn't work
+};
+
+const shows = document.querySelectorAll(".shows-list__container-li"); // made this one to get rid of an error "shows undefined"
 
 shows.forEach((show) => {
   displayShows(show.date, show.venue, show.location);
