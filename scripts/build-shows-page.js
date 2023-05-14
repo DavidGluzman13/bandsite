@@ -83,14 +83,15 @@ const displayShows = (date, venue, location) => {
   // remove selection off of the previously selected item
 
   listItem.addEventListener("click", function (event) {
-    const selected = document.querySelector("selected");
-    if (!selected) {
-      listItem.classList.add("selected");
-    } else {
+    const selected = document.querySelector(
+      ".shows-list__container-li.selected"
+    );
+    if (selected) {
       selected.classList.remove("selected");
-      listItem.classList.add("selected");
     }
+    listItem.classList.add("selected");
   });
+
   return list;
 };
 
@@ -108,9 +109,9 @@ const formatDate = (date) => {
 
 const shows = document.querySelectorAll(".shows-list__container-li"); // made this one to get rid of an error "shows undefined"
 
-shows.forEach((show) => { 
+shows.forEach((show) => {
   displayShows(show.date, show.venue, show.location);
-}); 
+});
 
 const addLabelClass = () => {
   const labels = document.querySelectorAll("li:not(:first-child) label");
@@ -120,5 +121,3 @@ const addLabelClass = () => {
 };
 
 addLabelClass();
-
-
