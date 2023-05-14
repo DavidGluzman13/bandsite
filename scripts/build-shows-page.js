@@ -94,7 +94,7 @@ const displayShows = (date, venue, location) => {
   return list;
 };
 
-// Make a function that takes the date as a paremeter and returns a human-readable format
+// Made a function that takes the date as a paremeter and returns a human-readable format
 const formatDate = (date) => {
   const format = {
     weekday: "short",
@@ -108,9 +108,9 @@ const formatDate = (date) => {
 
 const shows = document.querySelectorAll(".shows-list__container-li"); // made this one to get rid of an error "shows undefined"
 
-shows.forEach((show) => {
+shows.forEach((show) => { 
   displayShows(show.date, show.venue, show.location);
-});
+}); 
 
 const addLabelClass = () => {
   const labels = document.querySelectorAll("li:not(:first-child) label");
@@ -120,3 +120,5 @@ const addLabelClass = () => {
 };
 
 addLabelClass();
+
+

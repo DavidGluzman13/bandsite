@@ -263,9 +263,12 @@ body {
   }
 }
 
-// .shows-list__container-li--datediv--content {
-
-// }
+li:not(:first-child) label {
+  //this allows the labels to still show in the mobile view but
+  @include tablet {
+    display: none;
+  }
+}
 
 .selected {
   background-color: #e1e1e1;
