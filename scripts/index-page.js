@@ -1,5 +1,5 @@
 let commentURL =
-  "https://project-1-api.herokuapp.com/comments?api_key=3a907c48-ff85-47ed-a9c3-0e5400730f51";
+  "https://project-1-api.herokuapp.com/comments?api_key=7687de2b-7bf7-46bd-82f8-eda0f2c7794d";
 
 axios.get(commentURL).then((response) => {
   const sortedComments = response.data.sort(
