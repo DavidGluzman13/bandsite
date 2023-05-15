@@ -1,5 +1,5 @@
 let showsURL =
-  "https://project-1-api.herokuapp.com/showdates?api_key=3a907c48-ff85-47ed-a9c3-0e5400730f51";
+  "https://project-1-api.herokuapp.com/showdates?api_key=3a907c48-ff85-47ed-a9c3-0e5400730f51&sort=desc";
 
 axios
   .get(showsURL)

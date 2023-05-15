@@ -37,13 +37,13 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .navbar {
-    height: 7rem;
+    height: 5rem;
   }
 }
 .navbar__header {
   margin-bottom: 0;
-  width: 15rem;
-  padding: 2rem 0 0 0;
+  width: 10rem;
+  padding: 1.5rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
   .navbar__header {
@@ -55,7 +55,7 @@ body {
   .navbar__header {
     margin: 0 4rem 0 10rem;
     padding: 0;
-    width: 12rem;
+    width: 8rem;
   }
 }
 .navbar__buttons {
@@ -76,9 +76,9 @@ body {
   color: #ffffff;
   border: none;
   text-decoration: none;
-  font-size: 1.5rem;
-  width: 50%;
-  padding: 1.5rem 0;
+  font-size: 1rem;
+  width: 30%;
+  padding: 1rem 0;
 }
 @media screen and (min-width: 768px) {
   .navbar__button {
@@ -90,11 +90,11 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .navbar__button {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 .navbar__button--special {
-  border-bottom: 7px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
@@ -105,8 +105,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .navbar__button--special {
-    padding: 2.8rem 0;
-    width: 4.8rem;
+    padding: 2rem 0;
+    width: 4.4rem;
   }
 }
 
@@ -114,25 +114,25 @@ body {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-bio.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 35vh;
+  height: 20vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 @media screen and (min-width: 768px) {
   .hero {
-    height: 55vh;
+    height: 35vh;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: 75vh;
+    height: 50vh;
   }
 }
 .hero__header {
   color: #ffffff;
-  font-size: 3.5rem;
-  margin: 1rem 2rem;
+  font-size: 2rem;
+  margin: 1rem 1.5rem;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
@@ -149,7 +149,7 @@ body {
 }
 
 .bio {
-  margin: 1rem;
+  margin: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .bio {
@@ -164,31 +164,30 @@ body {
     margin: 2rem 10rem;
   }
 }
-.bio__header {
-  font-size: 3rem;
+.bio__header, .gallery__header, .comment-header {
+  font-size: 2rem;
   color: #323232;
-  font-weight: 100;
-  margin: 1rem;
-  margin-bottom: 0;
-  padding-top: 2rem;
+  font-weight: 900;
+  margin: 0;
+  padding: 1rem 0;
 }
 @media screen and (min-width: 768px) {
-  .bio__header {
+  .bio__header, .gallery__header, .comment-header {
     font-size: 2.2rem;
     padding: 1rem 0;
     margin: 0;
   }
 }
 @media screen and (min-width: 1280px) {
-  .bio__header {
-    font-size: 3rem;
+  .bio__header, .gallery__header, .comment-header {
+    font-size: 2rem;
   }
 }
 .bio__img {
-  width: 90vw;
+  width: 100%;
+  align-self: center;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 1rem;
   margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
@@ -204,18 +203,16 @@ body {
   .bio__img {
     margin: 1rem 7rem;
     width: 65vw;
-    -o-object-fit: cover;
-       object-fit: cover;
+    height: 35vh;
+    background-size: cover;
   }
 }
 .bio__quote, .bio__mini-header, .bio__ref {
-  font-size: 1.7rem;
-  font-weight: 600;
-  margin: 1rem;
-  margin-bottom: 0;
-  padding-top: 0;
-  line-height: 3rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 2rem;
   color: #323232;
+  margin: 1rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
   .bio__quote, .bio__mini-header, .bio__ref {
@@ -228,8 +225,9 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .bio__quote, .bio__mini-header, .bio__ref {
-    font-size: 1.7rem;
-    line-height: 3rem;
+    font-size: 1.5rem;
+    width: 45rem;
+    line-height: 2rem;
     margin: 1rem 4rem;
     padding: 0;
     margin-bottom: 0.5rem;
@@ -246,7 +244,6 @@ body {
   }
 }
 .bio__mini-header {
-  font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -258,7 +255,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .bio__mini-header {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin: 1rem 4rem;
     margin-bottom: 0;
   }
@@ -277,9 +274,9 @@ body {
   }
 }
 .bio__content--modifier {
-  font-size: 1.5rem;
-  margin: 1rem 3.5rem 1rem 1rem;
-  line-height: 2.4rem;
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+  line-height: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .bio__content--modifier {
@@ -294,9 +291,9 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .bio__content--modifier {
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     margin: 1rem 0rem 1rem 4rem;
-    line-height: 2.4rem;
+    line-height: 1.5rem;
   }
   .bio__content--modifier.bio__content--special {
     margin-right: 4rem;
@@ -320,24 +317,20 @@ body {
     padding: 1rem 0;
   }
 }
-.gallery__header {
-  font-size: 3rem;
-  margin: 2rem;
-  margin-bottom: 0;
-  padding-top: 2rem;
-  color: #323232;
+.gallery__header, .comment-header {
+  padding: 2rem 0 0 1rem;
 }
 @media screen and (min-width: 768px) {
-  .gallery__header {
+  .gallery__header, .comment-header {
     font-size: 2.2rem;
     padding: 0;
     margin: 0 2rem 0;
   }
 }
 @media screen and (min-width: 1280px) {
-  .gallery__header {
+  .gallery__header, .comment-header {
     font-size: 2.2rem;
-    padding-bottom: 1rem;
+    padding: 2rem 0;
     margin: 0 auto;
     max-width: 1020px;
   }
@@ -366,7 +359,7 @@ body {
 .gallery__images--img {
   background-size: cover;
   background-position: center;
-  margin: 2rem;
+  margin: 1rem;
   margin-bottom: 0;
   width: 90vw;
 }
@@ -394,13 +387,6 @@ body {
   margin-bottom: 2%;
   background-color: #afafaf;
 }
-.comment-header {
-  font-size: 3.7rem;
-  margin: 2rem;
-  margin-bottom: 0;
-  padding-top: 2rem;
-  color: #323232;
-}
 @media screen and (min-width: 768px) {
   .comment-header {
     font-size: 2rem;
@@ -419,7 +405,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   box-sizing: border-box;
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
 @media screen and (min-width: 768px) {
   .comment-div {
@@ -467,7 +453,7 @@ body {
   }
 }
 .comment-div__container--label {
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 2rem 0 0.5rem 0;
 }
 @media screen and (min-width: 768px) {
@@ -478,12 +464,12 @@ body {
 .comment-div__container--input, .comment-div__container--input--comment {
   width: 100%;
   box-sizing: border-box;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 0.5rem;
   background-color: #fafafa;
   color: #323232;
   border: 3px solid #e1e1e1;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 @media screen and (min-width: 768px) {
   .comment-div__container--input, .comment-div__container--input--comment {
@@ -495,12 +481,12 @@ body {
 }
 .comment-div__container--input::-moz-placeholder, .comment-div__container--input--comment::-moz-placeholder {
   padding: 1rem 0;
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: black;
 }
 .comment-div__container--input::placeholder, .comment-div__container--input--comment::placeholder {
   padding: 1rem 0;
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: black;
 }
 @media screen and (min-width: 768px) {
@@ -516,7 +502,7 @@ body {
   border: 1px solid #323232;
 }
 .comment-div__container--input--comment {
-  padding-bottom: 10rem;
+  padding-bottom: 7rem;
   position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -534,13 +520,13 @@ body {
 }
 .comment-div__container--button {
   width: 100%;
-  height: 6.5rem;
+  height: 4rem;
   margin: 2rem 0.1rem;
   border-radius: 0.5rem;
   background-color: #323232;
   color: #ffffff;
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 700;
   border: none;
   cursor: pointer;
   align-self: flex-end;
@@ -556,10 +542,10 @@ body {
   }
 }
 .comment-div__img--modifier {
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
-  margin: 2rem 0;
+  margin: 4rem 0;
   margin-bottom: 0;
   -o-object-fit: cover;
      object-fit: cover;
@@ -580,6 +566,8 @@ body {
 
 .review {
   list-style: none;
+  padding: 1rem 0 0 1rem;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .review {
@@ -594,7 +582,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 2px solid #e1e1e1;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -609,8 +597,8 @@ body {
 }
 .review__card--user--img {
   background-color: #e1e1e1;
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -623,8 +611,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .review__card--user--img {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 .review__card--container {
@@ -643,7 +631,7 @@ body {
   }
 }
 .review__card--container--name {
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-weight: 700;
   width: 40%;
   margin: 0;
@@ -655,7 +643,7 @@ body {
   }
 }
 .review__card--container--date {
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #afafaf;
   margin: 0;
@@ -667,12 +655,12 @@ body {
   }
 }
 .review__card--container--comment {
-  font-size: 1.8rem;
+  font-size: 1rem;
   width: 100%;
   font-weight: 400;
   color: #323232;
   margin: 0;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .review__card--container--comment {
@@ -683,8 +671,7 @@ body {
 footer {
   background-color: #323232;
   color: #ffffff;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 2rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
   footer {
@@ -715,7 +702,7 @@ footer {
   }
 }
 .footer-navbar__header {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-left: 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -726,11 +713,11 @@ footer {
   }
 }
 .footer-navbar__icons {
-  width: 16rem;
+  width: 12rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 2em;
+  height: 1em;
   margin-bottom: 5rem;
 }
 @media screen and (min-width: 768px) {
@@ -743,8 +730,8 @@ footer {
   }
 }
 .footer-navbar__icons--modifier {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   margin-left: 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -773,12 +760,12 @@ footer {
   }
 }
 .footer__info-content--agent--Name h2 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #e1e1e1;
   padding: 0;
   margin: 0;
-  line-height: 2.4rem;
+  line-height: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .footer__info-content--agent--Name h2 {
@@ -787,7 +774,7 @@ footer {
   }
 }
 .footer__info-content--agent--location p, .footer__info-content--agent--email {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #e1e1e1;
   font-weight: 200;
   padding: 0;
@@ -800,7 +787,7 @@ footer {
   }
 }
 .footer__info-content--agent--Name, .footer__info-content--agent--location, .footer__info-content--agent--email {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   margin-left: 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -818,7 +805,7 @@ footer {
   }
 }
 .footerlogo__img {
-  width: 15rem;
+  width: 10rem;
   margin: 0;
   margin-bottom: 1rem;
   margin-left: 1rem;
@@ -838,10 +825,10 @@ footer {
   }
 }
 .footer__bottom--text {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 200;
-  padding: 0;
-  margin-bottom: 2rem;
+  padding: 1rem 0;
+  margin: 0;
   margin-left: 1rem;
 }
 @media screen and (min-width: 768px) {
